@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.burger {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.toggle .line1 {
+  -webkit-transform: rotate(45deg) translate(5px, 6px);
+          transform: rotate(45deg) translate(5px, 6px);
+  background-color: #fff;
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotate(-45deg) translate(5px, -6px);
+          transform: rotate(-45deg) translate(5px, -6px);
+  background-color: #fff;
+}
+
+.nav-wrapper {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../img/coffie-shop.jpg");
+  background-size: cover;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav-active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  text-align: left;
+  opacity: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+nav li:hover p {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 1;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+nav li:hover a {
+  color: #000;
+}
+
+nav p {
+  width: 40%;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  margin: 50px;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  font-weight: 600;
+  opacity: 0;
+}
+
+nav p::-moz-selection {
+  background-color: #fff;
+}
+
+nav p::selection {
+  background-color: #fff;
+}
+
+nav a {
+  text-decoration: none;
+  color: #cac4b9;
+  font-size: 120px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  display: block;
+  margin: 0 10px;
+}
+
+.hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c73f09)) no-repeat calc(200% - var(--p, 0%)) 100%/200% var(--p, 0.08em);
+  background: linear-gradient(#c73f09 0 0) no-repeat calc(200% - var(--p, 0%)) 100%/200% var(--p, 0.08em);
+  -webkit-transition: 0.3s var(--t, 0s), background-position 0s calc(0s - var(--t, 0s));
+  transition: 0.3s var(--t, 0s), background-position 0s calc(0s - var(--t, 0s));
+}
+
+.hover:hover {
+  --p: 100%;
+  --t: 0s;
+  color: #000;
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-100px);
+            transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+/*# sourceMappingURL=style.css.map */
